@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Kassaye Gessese | Portfolio</title>
+
+    <!-- SEO -->
+
+    <meta name="description" content="Kassaye Gessese Portfolio Website" />
+
+    <!-- Tailwind CSS -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        html{
+            scroll-behavior:smooth;
+        }
+
+        body{
+            font-family:Arial,sans-serif;
+            background:linear-gradient(135deg,#020617,#0f172a,#1e293b);
+            color:white;
+            overflow-x:hidden;
+        }
+
+        section{
+            padding:100px 20px;
+        }
+
+        /* NAVBAR */
+
+        nav{
+            position:fixed;
+            top:0;
+            width:100%;
+            z-index:1000;
+            background:rgba(2,6,23,0.85);
+            backdrop-filter:blur(12px);
+            border-bottom:1px solid rgba(255,255,255,0.08);
+        }
+
+        .nav-link{
+            position:relative;
+            color:#cbd5e1;
+            text-decoration:none;
+            transition:0.3s;
+        }
+
+        .nav-link:hover{
+            color:#10b981;
+        }
+
+        .nav-link::after{
+            content:'';
+            position:absolute;
+            left:0;
+            bottom:-5px;
+            width:0;
+            height:2px;
+            background:#10b981;
+            transition:0.3s;
+        }
+
+        .nav-link:hover::after{
+            width:100%;
+        }
+
+        /* TEXT */
+
+        .gradient-text{
+            background:linear-gradient(135deg,#10b981,#06b6d4);
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+        }
+
+        /* PROFILE IMAGE */
+
+        .profile-img{
+            width:180px;
+            height:180px;
+            border-radius:50%;
+            object-fit:cover;
+            border:4px solid #10b981;
+            margin:auto;
+            box-shadow:0 0 40px rgba(16,185,129,0.4);
+            transition:0.4s;
+        }
+
+        .profile-img:hover{
+            transform:scale(1.05);
+        }
+
+        /* BUTTONS */
+
+        .btn-primary{
+            background:linear-gradient(135deg,#10b981,#059669);
+            transition:0.3s;
+        }
+
+        .btn-primary:hover{
+            transform:translateY(-4px);
+            box-shadow:0 10px 30px rgba(16,185,129,0.3);
+        }
+
+        .btn-outline{
+            border:1px solid #10b981;
+            color:#10b981;
+            transition:0.3s;
+        }
+
+        .btn-outline:hover{
+            background:rgba(16,185,129,0.1);
+            transform:translateY(-4px);
+        }
+
+        /* CARD */
+
+        .card{
+            transition:0.4s;
+        }
+
+        .card:hover{
+            transform:translateY(-10px);
+            box-shadow:0 20px 40px rgba(16,185,129,0.15);
+        }
+
+        /* SKILLS */
+
+        .skill{
+            padding:8px 16px;
+            border-radius:999px;
+            background:rgba(16,185,129,0.1);
+            border:1px solid rgba(16,185,129,0.3);
+            font-size:14px;
+        }
+
+        /* MOBILE */
+
+        @media(max-width:768px){
+
+            .hero-title{
+                font-size:42px;
+            }
+
+            nav .menu{
+                gap:14px;
+                font-size:14px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="py-5 px-6">
+
+    <div class="max-w-6xl mx-auto flex justify-between items-center flex-wrap gap-4">
+
+        <h1 class="text-2xl font-black gradient-text">
+            KG
+        </h1>
+
+        <div class="menu flex gap-6 flex-wrap">
+
+            <a href="#about" class="nav-link">About</a>
+
+            <a href="#skills" class="nav-link">Skills</a>
+
+            <a href="#projects" class="nav-link">Projects</a>
+
+            <a href="#contact" class="nav-link">Contact</a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="min-h-screen flex items-center justify-center">
+
+    <div class="text-center max-w-4xl mx-auto pt-16">
+
+        <!-- IMPORTANT -->
+        <!-- Put image.jpg in same folder as index.html -->
+
+        <img
+            src="./image.jpg"
+            alt="Kassaye Gessese"
+            loading="lazy"
+            class="profile-img mb-8"
+        />
+
+        <h1 class="hero-title text-5xl md:text-7xl font-black mb-6 gradient-text">
+
+            Kassaye Gessese
+
+        </h1>
+
+        <p class="text-xl md:text-2xl text-cyan-300 mb-8">
+
+            Full Stack Developer • AI Enthusiast • Digital Creative
+
+        </p>
+
+        <p class="text-gray-400 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+
+            I build beautiful, functional digital experiences
+            using modern technologies, creativity and innovation.
+
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-4">
+
+            <a href="#projects"
+               class="btn-primary px-8 py-4 rounded-full text-white font-semibold inline-flex items-center gap-2">
+
+                <i data-lucide="rocket"></i>
+
+                Explore Work
+
+            </a>
+
+            <a href="#contact"
+               class="btn-outline px-8 py-4 rounded-full inline-flex items-center gap-2">
+
+                <i data-lucide="mail"></i>
+
+                Contact Me
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <div class="max-w-5xl mx-auto">
+
+        <h2 class="text-4xl font-bold mb-12 gradient-text text-center">
+
+            About Me
+
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-10">
+
+            <div>
+
+                <p class="text-lg text-gray-300 leading-8 mb-6">
+
+                    I'm Kassaye Gessese, a passionate Full Stack Developer,
+                    AI enthusiast and Digital Creative.
+
+                </p>
+
+                <p class="text-lg text-gray-400 leading-8">
+
+                    I specialize in modern web applications,
+                    machine learning projects and visually attractive interfaces.
+
+                </p>
+
+            </div>
+
+            <div class="space-y-5">
+
+                <!-- CARD -->
+
+                <div class="card p-6 rounded-2xl bg-slate-800/50 border border-emerald-500/20">
+
+                    <div class="flex items-center gap-3 mb-4">
+
+                        <i data-lucide="code-2" class="text-emerald-400"></i>
+
+                        <h3 class="text-xl font-bold">
+
+                            Development
+
+                        </h3>
+
+                    </div>
+
+                    <p class="text-gray-400">
+
+                        Frontend and backend web development.
+
+                    </p>
+
+                </div>
+
+                <!-- CARD -->
+
+                <div class="card p-6 rounded-2xl bg-slate-800/50 border border-cyan-500/20">
+
+                    <div class="flex items-center gap-3 mb-4">
+
+                        <i data-lucide="palette" class="text-cyan-400"></i>
+
+                        <h3 class="text-xl font-bold">
+
+                            Creative Design
+
+                        </h3>
+
+                    </div>
+
+                    <p class="text-gray-400">
+
+                        UI/UX, branding, graphics and editing.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills" class="bg-slate-900/40">
+
+    <div class="max-w-6xl mx-auto">
+
+        <h2 class="text-4xl font-bold text-center mb-16 gradient-text">
+
+            Skills
+
+        </h2>
+
+        <div class="flex flex-wrap justify-center gap-4">
+
+            <span class="skill">HTML</span>
+
+            <span class="skill">CSS</span>
+
+            <span class="skill">JavaScript</span>
+
+            <span class="skill">React</span>
+
+            <span class="skill">PHP</span>
+
+            <span class="skill">Python</span>
+
+            <span class="skill">Machine Learning</span>
+
+            <span class="skill">Tailwind CSS</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+    <div class="max-w-6xl mx-auto">
+
+        <h2 class="text-4xl font-bold text-center mb-16 gradient-text">
+
+            Projects
+
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-8">
+
+            <!-- PROJECT -->
+
+            <div class="card bg-slate-800/50 p-6 rounded-2xl border border-emerald-500/20">
+
+                <i data-lucide="globe" class="text-emerald-400 mb-4"></i>
+
+                <h3 class="text-2xl font-bold mb-4">
+
+                    Portfolio Website
+
+                </h3>
+
+                <p class="text-gray-400">
+
+                    Responsive personal portfolio using HTML,
+                    CSS and JavaScript.
+
+                </p>
+
+            </div>
+
+            <!-- PROJECT -->
+
+            <div class="card bg-slate-800/50 p-6 rounded-2xl border border-cyan-500/20">
+
+                <i data-lucide="chart-column" class="text-cyan-400 mb-4"></i>
+
+                <h3 class="text-2xl font-bold mb-4">
+
+                    Trading Dashboard
+
+                </h3>
+
+                <p class="text-gray-400">
+
+                    Modern dashboard with authentication and analytics.
+
+                </p>
+
+            </div>
+
+            <!-- PROJECT -->
+
+            <div class="card bg-slate-800/50 p-6 rounded-2xl border border-emerald-500/20">
+
+                <i data-lucide="bot" class="text-emerald-400 mb-4"></i>
+
+                <h3 class="text-2xl font-bold mb-4">
+
+                    AI Chatbot
+
+                </h3>
+
+                <p class="text-gray-400">
+
+                    NLP chatbot using machine learning technologies.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="bg-slate-900/40">
+
+    <div class="max-w-4xl mx-auto text-center">
+
+        <h2 class="text-4xl font-bold mb-10 gradient-text">
+
+            Contact Me
+
+        </h2>
+
+        <div class="flex flex-wrap justify-center gap-5">
+
+            <!-- EMAIL -->
+
+            <a href="mailto:kassayegessese@gmail.com"
+               class="btn-primary px-8 py-4 rounded-full text-white inline-flex items-center gap-2">
+
+                <i data-lucide="mail"></i>
+
+                Email
+
+            </a>
+
+            <!-- PHONE -->
+
+            <a href="tel:+251993408171"
+               class="btn-outline px-8 py-4 rounded-full inline-flex items-center gap-2">
+
+                <i data-lucide="phone"></i>
+
+                Call
+
+            </a>
+
+            <!-- GITHUB -->
+
+            <a href="https://github.com/kassayegessese-dot"
+               target="_blank"
+               class="btn-outline px-8 py-4 rounded-full inline-flex items-center gap-2">
+
+                <i data-lucide="github"></i>
+
+                GitHub
+
+            </a>
+
+            <!-- TIKTOK -->
+
+            <a href="https://tiktok.com/@ilikejesusmostone"
+               target="_blank"
+               class="btn-outline px-8 py-4 rounded-full inline-flex items-center gap-2">
+
+                <i data-lucide="music-2"></i>
+
+                TikTok
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="py-8 text-center text-gray-500 border-t border-slate-800">
+
+    <p>
+
+        © 2026 Kassaye Gessese
+
+    </p>
+
+</footer>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+    // LOAD ICONS
+
+    lucide.createIcons();
+
+</script>
+
+</body>
+
+</html>
